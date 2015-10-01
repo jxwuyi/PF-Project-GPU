@@ -119,14 +119,14 @@ int main() {
 
     // resample
     thrust::inclusive_scan(W.begin(), W.end(), W.begin());
-/*
+
     double tot_sum = W[N - 1];
     curandGenerateUniformDouble(gen, Z_ptr, N);
     thrust::transform(Z.begin(), Z.end(), Y.begin(),
                       resample(tot_sum, W_ptr, X_ptr, N));
     thrust::copy(Y.begin(), Y.end(), X.begin());
-  */
-}
+  
+  }
 
   end = clock();
   duration = 1.0 * (end - start) / CLOCKS_PER_SEC;
