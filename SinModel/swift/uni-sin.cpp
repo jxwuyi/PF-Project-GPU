@@ -29,9 +29,9 @@
 #include "random/UniformChoice.cpp"
 #include "random/UniformInt.cpp"
 #include "random/UniformReal.cpp"
-#include "util/Hist.cpp"
-#include "util/util.cpp"
-#include "util/DynamicTable.cpp"
+#include "util/Hist.h"
+#include "util/util.h"
+#include "util/DynamicTable.h"
 
 using namespace std;
 using namespace swift::random;
@@ -44,7 +44,7 @@ namespace swift {
   class BLOG_Static_State;
   class BLOG_Temporal_State;
 
-  const int _ParticleN_ = 2000;
+  const int _ParticleN_ = 5000;
   const int _TimeLim_ = 5000;
   const int _DependN_ = 2;
 

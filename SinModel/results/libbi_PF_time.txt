@@ -1,0 +1,2 @@
+2000 particles: 2.878s
+5000 particles: 6.177s
