@@ -10,7 +10,7 @@ model SinModel {
   obs Y          // Data
 
   sub parameter {
-    theta ~ uniform(-5.0, 5.0)
+    theta ~ uniform(-1.0, 1.0)
   }
 
   sub initial {
@@ -25,12 +25,7 @@ model SinModel {
   sub observation {
     Y ~ gaussian(X, 1.0)
   }
-/*
   sub proposal_parameter {
-    R ~ truncated_gaussian(R, 0.03, lower = 0.0)
-    C ~ truncated_gaussian(C, 0.1, lower = 0.0)
-    Z ~ truncated_gaussian(Z, 0.002, lower = 0.0)
-    sigma2 ~ inverse_gamma(2.0, 3.0*sigma2)
+    theta ~ truncated_gaussian(theta, 0.03, lower = -1.0, upper = 1.0)
   }
-  */
 }
